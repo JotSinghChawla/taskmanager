@@ -6,7 +6,7 @@ import About from './components/About'
 import Task from './components/Task'
 import AddTask from './components/AddTask'
 
-
+// Functional Component 
 const App = ()=> {
 
   // var [id,setId] = useState(3);  
@@ -49,17 +49,18 @@ const deleteTask = async (id) => {
 const reminder = async (id) => {
     const taskToToggle = await fetchSingleTask(id)
     const updateTask = { ...taskToToggle, reminder: !taskToToggle.reminder } 
+ 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'PUT',
-      header: {
+      headers: {
         'Content-type': 'application/json'
       },
       body: JSON.stringify(updateTask)
     }) 
     
-    const data = await res.json()
+  //  const data = await res.json()         // No use
 
-    setTaskFunction(tasks.map( (check) =>  check.id === id ? { ...check, reminder: data.reminder } : check )) 
+    setTaskFunction(tasks.map( (check) =>  check.id === id ? { ...check, reminder: !check.reminder } : check )) 
 }
 // Add Task
 const addTask = async (task) => {
@@ -69,7 +70,7 @@ const addTask = async (task) => {
       'Content-type': 'application/json'
     },
     body: JSON.stringify(task)
-  })
+  })  
 
   const newTask = await res.json()
 
@@ -98,14 +99,5 @@ const addTask = async (task) => {
     </Router>
   );
 }
-
-//      This is a method to render using class above method renders code using function
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <h1>Hello, how are you?</h1>
-//     );
-//   }
-// }
 
 export default App;

@@ -2,13 +2,12 @@ import { useState } from 'react'
 
 const AddTask = ({ onAdd }) => {
 
-    const [text, setText] = useState('hello');
+    const [text, setText] = useState('Please add your task');
     const [day, setDay] = useState('');
     const [reminder, setReminder] = useState(false); 
     
     const onSubmit = (event) => {
         event.preventDefault()
-
         if (!text) {
             alert("Please add a task")
             return

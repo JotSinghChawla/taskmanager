@@ -4,7 +4,7 @@
       "id": 2,
       "text": "Meeting at School",
       "day": "Feb 6th",
-      "reminder": false
+      "reminder": true
     },
     {
       "text": "Grocery Shopping",
@@ -21,14 +21,8 @@
     {
       "text": "Doctor's Appointment",
       "day": "7th Feb",
-      "reminder": false,
-      "id": 5
-    },
-    {
-      "text": "Front-end Interview",
-      "day": "28th Feb",
       "reminder": true,
-      "id": 6
+      "id": 5
     }
   ]
 }
