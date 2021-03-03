@@ -14,21 +14,15 @@
     },
     {
       "text": "Exam",
-      "day": "15th Feb",
+      "day": "Feb 12th ",
       "reminder": true,
       "id": 4
     },
     {
-      "text": "Doctor's Appointment",
-      "day": "7th Feb",
+      "text": "Doctors Appointment",
+      "day": "Feb 15th",
       "reminder": false,
       "id": 5
-    },
-    {
-      "text": "Front-end Interview",
-      "day": "28th Feb",
-      "reminder": true,
-      "id": 6
     }
   ]
 }
